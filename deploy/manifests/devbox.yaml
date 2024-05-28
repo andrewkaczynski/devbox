@@ -69,7 +69,7 @@ spec:
         fsGroup: 1000
       initContainers:
       - name: init-chmod-data
-        image: "andrewkaczynski/devbox:1.1"
+        image: "andrewkaczynski/devbox:1.2"
         imagePullPolicy: IfNotPresent
         command:
           - sh
@@ -84,7 +84,7 @@ spec:
           mountPath: /home/coder/data
       containers:
         - name: devbox
-          image: "andrewkaczynski/devbox:1.1"
+          image: "andrewkaczynski/devbox:1.2"
           imagePullPolicy: Always
           securityContext:
             runAsUser: 1000
