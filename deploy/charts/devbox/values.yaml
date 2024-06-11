@@ -85,7 +85,7 @@ volumePermissions:
     runAsUser: 0
   image:
     repository: andrewkaczynski/devbox
-    tag: '1.1'
+    tag: '1.3'
 
 ## Pod Security Context
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/

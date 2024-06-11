@@ -1,0 +1,25 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: devbox
+resources:
+- deployment.yaml
+- service.yaml
+- secret.yaml
+- serviceaccount.yaml
+- pvc.yaml
+
+images:
+- name: devbox
+  newTag: "1.3"
+- name: init-chmod-data
+  newTag: "1.3"
+
+# patches:
+# - patch: |-
+#     - op: replace
+#       path: /stringData/password
+#       value: newPassword
+#   target:
+#     kind: Secret
+#     name: devbox
+

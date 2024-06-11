@@ -14,6 +14,8 @@ My personal container image based on [code-server](https://github.com/coder/code
 | tig                   |
 | extra VSC extensions  |
 | go-httpbin            |
+| awscli                |
+| skopeo                |
 
 # Installation
 Depending on the preference, there are two methods available
@@ -22,11 +24,11 @@ Depending on the preference, there are two methods available
 
 ## Manifests
 
-See the ``deploy\manifests`` folder for the YAML manifests which can be used for the installation.
+See the ``deploy\manifests`` folder for the YAML manifests with kustomize which can be used for the installation.
 You can easily install it by running:
 
 ```bash
-kubectl apply -f deploy/manifests/
+kubectl apply -k deploy/manifests/
 ```
 
 ## Helm Chart
